@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Ingrese su estatura en metros: ");
+        double estatura = sc.nextDouble();
+
+        System.out.println("Ingrese su peso en kilogramos: ");
+        double peso = sc.nextDouble();
+
+        System.out.println("Ingrese su edad: ");
+        int edad = sc.nextInt();
+
+
+        double imc = peso / (estatura * estatura);
+
+
+        String condicionRiesgo = "";
+        if (imc < 18.5) {
+            condicionRiesgo = "Bajo peso";
+        } else if (imc < 25) {
+            condicionRiesgo = "Peso normal";
+        } else if (imc < 30) {
+            condicionRiesgo = "Sobrepeso";
+        } else {
+            condicionRiesgo = "Obesidad";
+        }
+
+        System.out.println("Su índice de masa corporal (IMC) es: " + imc);
+        System.out.println("Su condición de riesgo es: " + condicionRiesgo);
+        }
+    }
