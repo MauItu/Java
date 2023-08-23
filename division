@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Bienvenido, por favor ingrese el primer dividendo ");
+        int dividendo = sc.nextInt();
+
+        System.out.println("Ingrese el segundo divisor ");
+        int divisor = sc.nextInt();
+        if (divisor == 0)
+        {
+            System.out.println("LA operacion no se puede hacer");
+        }
+        else {
+            if (dividendo % divisor == 0) {
+                System.out.println("La division es exacta");
+            } else {
+                System.out.println("La division no es exacta");
+            }
+        }
+
+    }
+}
